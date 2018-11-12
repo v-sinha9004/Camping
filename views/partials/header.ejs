@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    </head>
+    <body>
+        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">YelpCamp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+    </ul>
+    <ul class="nav navbar-nav  navbar-right">
+      <%  if(!currentUser){ %>
+        	<li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+        	<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+    <%    }else{ %>
+            <li class="nav-item"><a class="nav-link" href="#">Signed In As <%=currentUser.username %> </a></li>
+    		<li class="nav-item"><a class="nav-link" href="/logout">LogOut</a></li>
+    <%	} %>
+    </ul>
+</div>
+</nav>
+
+
+<div id="flash" class="container">
+  <% if(error && error.length>0){ %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+  <% } %>
+    <% if(success && success.length>0){ %>
+  <div class="alert alert-success" role="alert">
+    <%= success %>
+  </div>
+    <% } %>
+</div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

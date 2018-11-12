@@ -1,0 +1,35 @@
+.img-thumbnail img{
+    width:100%;
+}
+
+#upper{
+    display: inline;
+}
+
+.img-thumbnail{
+    padding:0;
+}
+
+.caption-full{
+    padding:9px;
+}
+
+#card-bottom{
+    margin-bottom: 20px;
+}
+
+#delete-form{
+    display: inline;
+}
+
+#distance{;
+   margin: 0 auto;
+}
+
+#delete-form-2{
+    display: inline;
+}
+
+#flash{
+    margin-top: 20px;
+}
